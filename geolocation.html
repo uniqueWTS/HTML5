@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 template</title>
+	<!-- HTML5 shiv -->
+	<!-- [if lt IE 9]>
+		<script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="geo">
+			<h2>点击按钮获取地理位置:</h2>
+			<button type="button" id="btn" onclick="getLocation()">点我</button>
+		</div>
+		<script>
+			var x = document.getElementById('btn');
+			// var options = {timeout: 60000, maximumAge: 99999, enableHighAccuracy: true};
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition, showError);
+				} else {
+					x.innerHTML = "您的浏览器不支持定位!";
+				}
+			}
+
+			function showPosition(position) {
+				x.innerHTML = "经度: " + position.coords.longtitude + " 纬度: " + position.coords.latitude;
+				console.log(position);
+			}
+
+			function showError(error) {
+				switch(error.code) 
+				{
+					case error.PERMISSION_DENIED:
+					x.innerHTML="用户拒绝对获取地理位置的请求。"
+					break;
+					case error.POSITION_UNAVAILABLE:
+					x.innerHTML="位置信息是不可用的。"
+					break;
+					case error.TIMEOUT:
+					x.innerHTML="请求用户地理位置超时。"
+					break;
+					case error.UNKNOWN_ERROR:
+					x.innerHTML="未知错误。"
+					break;
+				}
+			}
+		</script>
+	</body>
+	</html>

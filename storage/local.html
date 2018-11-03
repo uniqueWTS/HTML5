@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html manifest="local.appcache">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 template</title>
+	<!-- HTML5 shiv -->
+	<!-- [if lt IE 9]>
+		<script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="local.css">
+	</head>
+	<body>
+	<!-- 
+		开发一个Web应用, 记录亲人朋友的生日. 在他(她)们生日的时候, 提前准备礼物和祝福! 
+		功能:
+		1. CRUD. 添加, 查询(按生日排序), 修改和删除的功能.
+		2. 数据用localStorage持久化
+		3. 移动版(或响应式设计)
+	-->
+	<div class="wrapper">
+		<div class="left">
+			<form action="#" method="get" name="newRecord" id="newRecord">
+				<fieldset>
+					<legend>新增</legend>
+					<label for="fullname">姓名:</label>
+					<input type="text" name="fullname" id="fullname" autofocus required> <br>
+					<label for="birthday">生日:</label>
+					<input type="date" name="birthday" id="birthday" required> <br>
+					<button type="submit" class="btn-new" id="btn-new">新增</button>
+					<button type="reset" class="btn-reset">重置</button> <br>
+				</fieldset>
+			</form>
+
+			<form action="#" method="get" name="searchRecord" id="searchRecord">
+				<fieldset>
+					<legend>搜索</legend>
+					<label for="searchName">姓名:</label>
+					<input type="search" name="searchName" id="searchName" placeholder="输入姓名搜索, 例如张三" autocomplete> <br>
+					<button type="submit" id="btn-searchName" class="btn-searchName">搜索</button> <br>
+				</fieldset>
+			</form>
+
+
+			<form action="#" method="get" name="updateRecord" id="updateRecord">
+				<fieldset>
+					<legend>更改</legend>
+					<label for="nameBeforeUpdate">改前的姓名:</label>
+					<input type="text" name="nameBeforeUpdate" id="nameBeforeUpdate" class="nameBeforeUpdate" placeholder="请输入要更改前的人的姓名" required> <br>
+					<label for="nameAfterUpdate">改后的姓名:</label>
+					<input type="text" name="nameAfterUpdate" id="nameAfterUpdate" class="nameAfterUpdate" placeholder="请输入要更改后的人的姓名" required> <br>
+					<label for="birthAfterUpdate">改后的生日:</label>
+					<input type="date" name="birthAfterUpdate" id="birthAfterUpdate" class="birthAfterUpdate" placeholder="请输入要更改后的人的生日" required> <br>
+					<button type="submit" id="btnUpdate" class="btn-update">更改</button>
+					<button type="reset" class="btn-reset">重置</button>
+				</fieldset>
+			</form>
+
+			<form action="#" method="get" name="removeRecord" id="removeRecord">
+				<fieldset>
+					<legend>删除</legend>
+					<label for="removeName">删前的姓名:</label>
+					<input type="text" name="removeName" id="removeName" placeholder="请输入要删除的人的姓名" required> <br>
+					<button type="submit" id="btnRemove">删除</button>
+					<button type="button" id="btnClear">清空数据库</button>
+				</fieldset>
+			</form>
+		</div>
+		<div class="right">
+			<table id="loadRecord" class="text-center">
+				<caption><h2>生日列表</h2></caption>
+				<thead>
+					<tr>
+						<th>姓名</th>
+						<th>生日</th>
+						<th>数据库</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- display here -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	
+
+	<script src="local.js"></script>
+</body>
+</html>

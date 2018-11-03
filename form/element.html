@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 template</title>
+	<!-- HTML5 shiv -->
+	<!-- [if lt IE 9]>
+		<script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<form action="#" id="form2" method="post">
+		<!-- datalist -->
+		性别: <input list ="sex">
+		<datalist id="sex">
+			<option value="男"></option>
+			<option value="女"></option>
+		</datalist> 
+		<!-- keygen -->
+		用户名: <input type="text" name="username">
+		加密: <keygen name="keygen">
+		<input type="submit" value="提交"> <br>
+	</form>
+
+	<form action="#" method="get" oninput="output.value = parseInt(a.value) + parseInt(b.value)">
+		<!-- output -->
+		0<input type="range" id = "a" value="50">100 + 
+		<input type="number" id = "b" value="50" min="1" max="100"> = 
+		<output name="output" for="a b"></output> <br>
+	</form>
+</body>
+</html>

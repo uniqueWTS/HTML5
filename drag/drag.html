@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 template</title>
+	<!-- HTML5 shiv -->
+	<!-- [if lt IE 9]>
+		<script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="drag.css">
+	<script src="drag.js"></script>
+</head>
+<body>
+	<div id="div1">
+		<h2>把<b>Ubuntu Kylin</b>图片拖动到方框中</h2>
+		<div class="div2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<img id="logo" src="logo.png" alt="logo" draggable="true" ondragstart="drag(event)">
+		<div class="div2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	</div>
+</body>
+</html>

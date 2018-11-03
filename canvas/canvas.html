@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 template</title>
+	<!-- HTML5 shiv -->
+	<!-- [if lt IE 9]>
+		<script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+	<style>
+		#canvas1 { box-sizing: border-box; border: solid 1px silver; }
+	</style>
+</head>
+<body>
+	<img id="drawImage" src="logo.png" alt="ubuntu logo" style="display: none;">
+	<canvas id="canvas1" width="1000" height="400">
+		您的浏览器不支持 HTML5 canvas 标签。
+	</canvas>
+	<script src="CanvasUtil.js"></script>
+	<script>
+		CanvasUtil.drawRect("canvas1",0, 50, 500, 100, "#00FF00");
+		CanvasUtil.drawArc("canvas1", 25,25,25,0,1.5*Math.PI);
+		CanvasUtil.drawLine("canvas1",0,50,500,150);
+		CanvasUtil.drawText("canvas1", "Hello World", 175, 35, "30px Arial", "red");
+		CanvasUtil.drawLinerGradientRect("canvas1", 0, 150, "red", 500, 250, "white");
+		CanvasUtil.drawRadialGradientRect("canvas1", 0, 250, 30, "red", 500, 400, 100, "white");
+		CanvasUtil.drawImage("canvas1", "drawImage",550,50);
+	</script>
+</body>
+</html>

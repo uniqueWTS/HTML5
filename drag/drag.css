@@ -1,0 +1,19 @@
+#div1, .div2 {
+	margin: 0 auto;
+	text-align: center;
+	padding: 1rem;
+}
+
+.div2 {
+	box-sizing: border-box;
+	width: 400px;
+	height: 300px;
+	border: solid 1px #d5d5d5;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+#logo {
+	width: 300px;
+	height: auto;
+}
